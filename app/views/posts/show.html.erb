@@ -1,0 +1,20 @@
+
+	<%= render 'nav' %>
+<div class="well">
+	<p>
+	  <strong>Title:</strong>
+	  <%= @post.title %>
+	</p>
+	 
+	<p>
+	  <strong>Text:</strong>
+	  <%= @post.text %>
+	</p>
+	<p>
+	  <strong>Mail:</strong>
+	  <%= @post.email %>
+	</p>
+	<%= link_to 'Blog', posts_path %>
+	| <%= link_to 'Edit', edit_post_path(@post) %>
+</div>
+<%= render 'footer' %>

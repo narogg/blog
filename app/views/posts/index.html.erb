@@ -1,0 +1,55 @@
+<%= render 'nav' %>
+<!--<%= link_to "My Blog", controller: "posts" %>-->
+	<script>
+	$(document).ready(function(){
+	//alert('nekaj');
+	});
+	</script>
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading"><h3>Postovi</h3>
+  </div>
+  <div class="panel-body">
+	<%= link_to 'Novi post', new_post_path, :class => 'btn btn-primary' %>
+  </div>
+	<!--Table postova 
+	<table class="table">
+	  <tr>
+		<th>Title</th>
+		<th>Text</th>
+	  </tr>
+	 
+	  <% @posts.each do |post| %>
+		<tr>
+		  <td><%= post.title %></td>
+		  <td><%= post.text %></td>
+		  <td><%= post.email %></td>
+		</tr>
+	  <% end %>
+	</table>-->
+
+		<table class="table table-striped">
+		  <tr>
+
+			<th>Naslov</th>
+			<th>Tekst</th>
+			<th>Mail</th>
+			<th></th>
+			<th></th>
+			<th></th>
+		  </tr>
+			<% @posts.each do |post| %>
+		  <tr>
+			<td><%= post.title %></td>
+			<td><%= post.text %></td>
+			<td><%= post.email %></td>
+			<td><%= link_to 'Show', post %></td>
+			<td><%= link_to 'Edit', edit_post_path(post) %></td>
+			<td><%= link_to 'Destroy', post_path(post),
+							method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		  </tr>
+		<% end %>
+		</table>
+	</div> 
+		<%= render 'footer' %>
+	
