@@ -10,6 +10,7 @@ def create
  
   if @post.save
     redirect_to @post
+	flash[:notice] = "Post kreiran"
   else
     render 'new'
   end
@@ -34,6 +35,7 @@ def update
  
   if @post.update(params[:post].permit(:title, :text, :email))
     redirect_to @post
+	flash[:notice] = "Post updatean"
   else
     render 'edit'
   end
@@ -44,6 +46,7 @@ def destroy
   @post.destroy
  
   redirect_to posts_path
+  flash[:notice] = "Post obrisan"
 end
 
 #paziti jer kod ispod privatea nece da sljaka!
