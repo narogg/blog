@@ -12,7 +12,7 @@ def create
     redirect_to @post
 	flash[:notice] = "Post kreiran"
   else
-    flash[:alert] = "Neki problemi jebote!"
+    flash[:alert] = "Problemi navedeni ispod!"
 	render 'new'	
   end
 end
