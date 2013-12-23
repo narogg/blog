@@ -38,7 +38,7 @@ def update
     redirect_to @post
 	flash[:notice] = "Post updatean"
   else
-	flash[:alert] = "Neki problemi jebote!"
+	flash[:alert] = "Problemi ispod!"
     render 'edit'
   end
 end
