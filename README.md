@@ -1,6 +1,6 @@
 ROR tutorial app
 
-Može se vidjeti na http://blogachh.herokuapp.com/
+Moï¿½e se vidjeti na http://blogacnherokuapp.com/
 
 Technology Stack:
 Ruby 2.0.0,
